@@ -14,6 +14,7 @@
                 $userModel = new UserModel();
                 $result = $userModel->login($email,$pswd);
                 if ($result > 0) {
+                    $_SESSION['email'] = $email;
                     require_once('./mvc/controllers/show_all_customer.php');
                 }
                 else {

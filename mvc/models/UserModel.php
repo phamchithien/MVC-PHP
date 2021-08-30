@@ -10,6 +10,13 @@
             $check = mysqli_fetch_assoc($result);
             return $check;
         }
+        public function showUser($email)
+        {
+            $ConnectDB = new ConnectDB();
+            $sql = "SELECT * FROM user WHERE mailaddress = '$email'";
+            $result = mysqli_query($ConnectDB->conn, $sql);
+            return $result;
+        }
     }
     
 ?>

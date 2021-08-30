@@ -18,7 +18,12 @@
 </head>
 <body>
 
+<?php 
+    include_once('./mvc/views/header.php');
+?>
+
 <div class="container">
+    <h1 class="text-center">Show Customer</h1>
     <div class = "row">
         <div class="col-1">
             <ul> STT
